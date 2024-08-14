@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Тестовое задание &#8212; документация TestTask </title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=372fde1a"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=9bfe3ffa"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Тестовое задание<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Решение тестового задания содержит три раздела:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#id2">Процесс работы над документом в течение его жизненного цикла</a>.</p></li>
+<li><p><a class="reference internal" href="#id3">Перечень уточняющих вопросов к разработчику</a>.</p></li>
+<li><p><a class="reference internal" href="#id4">Описание установки программного компонента в соответствии с шаблоном</a>.</p></li>
+</ol>
+<section id="id2">
+<h2>Процесс работы над документом в течение его жизненного цикла<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Анализ исходного текста:</dt><dd><ul class="simple">
+<li><p>Прочитать текст от разработчика, чтобы понять процедуру установки компонента.</p></li>
+<li><p>Выявить недостатки в тексте и определить, какие уточняющие вопросы нужно задать разработчику.</p></li>
+<li><p>Переписать текст так, чтобы он был понятен специалистам, поверхностно знакомым с Kubernetes и Istio.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Сбор информации:</dt><dd><ul class="simple">
+<li><p>Задать разработчику уточняющие вопросы.</p></li>
+<li><p>Получить недостающую информацию.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Подготовка черновика:</dt><dd><ul class="simple">
+<li><p>Написать первую версию документа, добавив недостающую информацию.</p></li>
+<li><p>Оформить текст согласно шаблону.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Ревизия и правки:</dt><dd><ul class="simple">
+<li><p>Перечитать свой черновик, чтобы убедиться в отсутствии ошибок.</p></li>
+<li><dl class="simple">
+<dt>Отправить документ на проверку:</dt><dd><ul>
+<li><p>разработчику – для проверки полноты фактов;</p></li>
+<li><p>другому техническому писателю или специалисту – для проверки стиля и структуры документа, достаточности информации и ясности изложения;</p></li>
+<li><p>редактору – например, для проверки соответствия корпоративному стилю (гайдлайну);</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Внести правки на основе обратной связи.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Утверждение и публикация:</dt><dd><ul class="simple">
+<li><p>После окончательной проверки утвердить документ и подготовить его к публикации (передаче заказчику).</p></li>
+<li><p>Публиковать документ в системе управления документацией (передать заказчику в необходимом формате).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="id3">
+<h2>Перечень уточняющих вопросов к разработчику<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic">
+<li><p>Какие требования к версии Kubernetes и Istio?</p></li>
+<li><p>Что подразумевается под «оператором»? Какой оператор нужно установить (название, версия)?</p></li>
+<li><p>Какая роль у этого оператора? Что он делает в среде?</p></li>
+<li><p>Есть ли требования к системным ресурсам для развёртывания оператора?</p></li>
+<li><p>Есть ли примеры bash сценариев для параметра <code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">acm.caroot</span></code>?</p></li>
+<li><p>Команда для создания namespace – <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">create</span> <span class="pre">namespace</span> <span class="pre">itcacm-citadel-system</span></code>?</p></li>
+<li><p>Какая команда и параметры используются для создания секрета? Это правильная команда?</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">create</span> <span class="n">secret</span> <span class="n">docker</span><span class="o">-</span><span class="n">registry</span> <span class="o">&lt;</span><span class="n">имя_секрета</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">server</span><span class="o">=&lt;</span><span class="n">URL_реестра</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">username</span><span class="o">=&lt;</span><span class="n">имя_пользователя</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">password</span><span class="o">=&lt;</span><span class="n">пароль</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">email</span><span class="o">=&lt;</span><span class="n">email</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Пояснения к команде:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;имя_секрета&gt;</span></code> — название секрета, который будет создан;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;URL_реестра&gt;</span></code> — URL вашего Docker Registry – репозитория Docker-образов (например, для Docker Hub по умолчанию <code class="docutils literal notranslate"><span class="pre">https://index.docker.io/v1/</span></code>);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;имя_пользователя&gt;</span></code> — имя пользователя для авторизации в Docker Registry;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;пароль&gt;</span></code> — пароль для авторизации в Docker Registry;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;email&gt;</span></code> — адрес электронной почты, связанный с учётной записью.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+<li><p>Как проверить успешность установки и работы оператора?</p></li>
+<li><p>Можете уточнить порядок, необходимость и достаточность всех перечисленных шагов (например, нужны ли все перечисленные параметры при установке)?</p></li>
+<li><p>Какая последовательность команд, если нужно откатить изменения?</p></li>
+<li><p>Возможны ли какие-то ошибки в процессе установки и какие способы их решения?</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2>Описание установки программного компонента в соответствии с шаблоном<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p><strong>1. Оператор</strong></p>
+<p>Оператор — это программный компонент, который автоматизирует
+управление приложениями в кластере Kubernetes. Он выполняет задачи
+по развёртыванию, масштабированию и обновлению приложений. Для этого
+он использует заранее заданные шаблоны и конфигурации.</p>
+<p>1.1. Принцип работы</p>
+<p>Оператор расширяет функциональность Kubernetes. Он позволяет
+автоматизировать сложные операции, чтобы избежать ручного вмешательства.
+Оператор выполняет следующие действия:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Наблюдение</strong></dt><dd><p>Оператор постоянно следит за состоянием управляемых ресурсов
+(приложений, баз данных) в кластере.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Реакция</strong></dt><dd><p>Когда состояние ресурса отклоняется от желаемого, оператор
+принимает меры для обеспечения нормальной работы. Например, если
+приложение перестало отвечать, оператор его перезапустит. Если
+нагрузка на приложение увеличится, оператор выделит дополнительные
+ресурсы. И наоборот – при уменьшении нагрузки на приложение
+оператор освободит ресурсы.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Автоматизация</strong></dt><dd><p>Оператор может автоматически выполнять обновления приложения,
+управлять конфигурациями, осуществлять резервное копирование и
+другие операции без участия человека.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>1.2. Установка оператора</p>
+<ol class="arabic">
+<li><dl>
+<dt><strong>Создание namespace</strong></dt><dd><p>Начните с создания отдельного namespace, который будет
+использоваться для развёртывания оператора и связанных с ним
+ресурсов:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">create</span> <span class="n">namespace</span> <span class="n">itcacm</span><span class="o">-</span><span class="n">citadel</span><span class="o">-</span><span class="n">system</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Создание секрета с авторизационными данными для Docker Registry</strong></dt><dd><p>Чтобы Kubernetes мог загружать необходимые образы контейнеров,
+создайте секрет с данными для авторизации:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">create</span> <span class="n">secret</span> <span class="n">docker</span><span class="o">-</span><span class="n">registry</span> <span class="o">&lt;</span><span class="n">имя_секрета</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">server</span><span class="o">=&lt;</span><span class="n">URL_реестра</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">username</span><span class="o">=&lt;</span><span class="n">имя_пользователя</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">password</span><span class="o">=&lt;</span><span class="n">пароль</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">email</span><span class="o">=&lt;</span><span class="n">email</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Пояснения к команде:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;имя_секрета&gt;</span></code> — название секрета, который будет создан;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;URL_реестра&gt;</span></code> — URL вашего Docker Registry – репозитория Docker-образов (например, для Docker Hub по умолчанию <code class="docutils literal notranslate"><span class="pre">https://index.docker.io/v1/</span></code>);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;имя_пользователя&gt;</span></code> — имя пользователя для авторизации в Docker Registry;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;пароль&gt;</span></code> — пароль для авторизации в Docker Registry;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;email&gt;</span></code> — адрес электронной почты, связанный с учётной записью.</p></li>
+</ul>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Установка и настройка оператора с использованием Helm Chart</strong></dt><dd><p>Выполните следующую команду для установки оператора.
+Эта команда использует Helm Chart, который задаёт параметры
+развёртывания оператора и связанных с ним ресурсов по заранее
+определённому шаблону:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">helm</span> <span class="n">upgrade</span> <span class="o">-</span><span class="n">f</span> <span class="o">./</span><span class="n">chart</span><span class="o">/</span><span class="n">cr</span><span class="o">.</span><span class="n">yandex</span><span class="o">.</span><span class="n">yaml</span> <span class="o">--</span><span class="n">install</span> <span class="n">acmistio</span> <span class="o">--</span><span class="n">namespace</span> <span class="n">itcacm</span><span class="o">-</span><span class="n">citadel</span><span class="o">-</span><span class="n">system</span> \
+<span class="o">--</span><span class="nb">set</span> <span class="n">acm</span><span class="o">.</span><span class="n">caroot</span><span class="o">=</span><span class="s2">&quot;$(cat ~/Root_CA.pem)&quot;</span> \
+<span class="o">--</span><span class="nb">set</span> <span class="n">cluster</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="n">cwi</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">1</span> \
+<span class="o">--</span><span class="nb">set</span> <span class="n">image</span><span class="o">.</span><span class="n">appVersion</span><span class="o">=</span><span class="mf">2023.2.1</span><span class="o">-</span><span class="n">dev</span> \
+<span class="o">--</span><span class="nb">set</span> <span class="n">acm</span><span class="o">.</span><span class="n">configServers</span><span class="o">=</span><span class="s2">&quot;{https://p0esau-ap2301wn.domain.ru/api/acmcd,https://p0esau-ap2302lk.domain.ru/api/acmcd}&quot;</span> \
+<span class="o">./</span><span class="n">chart</span>
+</pre></div>
+</div>
+<p>Параметры:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">acm.caroot</span></code>: указывает содержимое файла корневого сертификата, можно использовать bash сценарий.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">cluster.name</span></code>: задаёт имя кластера, в котором будет развёрнут оператор.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">cluster.environment</span></code>: определяет окружение для оператора (DEV, TEST, PROD).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">acm.configServers</span></code>: задаёт список серверов, с которых будут получаться конфигурации.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">image.appVersion</span></code>: указывает версию приложения и тег Docker-образа (по умолчанию 2023.2.1).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Выдача сертификата для компонента Istio</strong></dt><dd><p>Создайте и сохраните TLS-сертификат в секрете istiod-tls. Сертификат
+обеспечит шифрование данных и безопасное взаимодействие между
+компонентами:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">apply</span> <span class="o">-</span><span class="n">f</span> <span class="o">./</span><span class="n">config</span><span class="o">/</span><span class="n">samples</span><span class="o">/</span><span class="n">istiod</span><span class="o">-</span><span class="n">autocert</span><span class="o">.</span><span class="n">yaml</span> <span class="o">-</span><span class="n">n</span> <span class="n">istio</span><span class="o">-</span><span class="n">system</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Обновление конфигурации Istio</strong></dt><dd><p>Обновите стандартную конфигурацию Istio, чтобы использовать
+собственную конфигурацию вместо стандартной цитадели. Это позволит
+использовать собственные настройки безопасности, сертификаты и
+другие специфические настройки в вашем окружении.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">apply</span> <span class="o">-</span><span class="n">f</span> <span class="o">./</span><span class="n">config</span><span class="o">/</span><span class="n">samples</span><span class="o">/</span><span class="n">istio</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="mf">1.12.2</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">TestTask</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, SergeyKardapoltsev.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
